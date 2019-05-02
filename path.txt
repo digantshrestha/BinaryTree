@@ -1,0 +1,37 @@
+cd e:/MyFiles/programming/NewClasses/BinaryTree
+javac src/com/pro/bt/Program.java
+java src.com.pro.bt.Program
+	
+
+public int power(int x, int y){		2 , 3
+	if(y==0){			3 == 0 false
+		return 1;	
+	}else{				
+		return x * power(x, y-1);	
+	}
+}
+
+5	8	2	7	4
+
+private Node addRecuresive(Node node,int value){	node 5 | node 8
+        if(node==null){					true	
+            System.out.println("SETTIN NODE " +value);
+            return new Node(value);			node(5)
+        }
+        if(value < node.getValue()){			8<5 false
+            
+            System.out.println("left found for "+ value);
+            node.setLeft(addRecuresive(node.getLeft(),value));
+        }
+        else if(value > node.getValue()){		8>5 true
+            System.out.println("Rigth found for "+value);
+            node.setRight(addRecuresive(node.getRight(),value));	setRight(addrecursive(rNode,8)) returned new Node(8)
+									 
+        }
+        return node;
+    }
+
+public void addNode(int value){		5	8
+        root=addRecuresive(root,value);		root, 5		returned new Node(5);
+						root, 8
+    }
